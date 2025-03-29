@@ -1,3 +1,9 @@
+Ilustrați strategiile de generare de teste prezentate la curs (partiționare în clase de
+echivalență, analiza valorilor de frontieră, acoperire la nivel de instrucțiune, decizie, condiție,
+circuite independente, analiză raport creat de generatorul de mutanți, teste suplimentare pentru a
+omorî 2 dintre mutanții neechivalenți rămași în viață) pe exemple proprii.
+
+
 # Testare unitară în Java
 
 Proiectul implementează o aplicație de banking care permite diferite acțiuni asupra unor conturi validate prin IBAN.
@@ -63,12 +69,29 @@ Dacă moneda este diferită de moneda contului, atunci prima data se va efectua 
 ![image](https://github.com/user-attachments/assets/0db85e71-b35e-46d0-a894-0eca5aeaa352)
 
 
+#### Testare funcțională - Partiționare de echivalență
+-> validateIban 
+-> deposit
+#### Testare funcțională - Valori de frontieră
+-> withdraw
+
+
+#### Testare structurală - Acoperire la nivel de instrucțiune
+#### Testare structurală - Acoperire la nivel de decizie
+#### Testare structurală - Acoperire la nivel de condiție
+#### Testare structurală - Circuite independente
+
+
 ## Raport Pitest (Mutation testing)
 ![image](https://github.com/user-attachments/assets/89b0a454-1cd9-4278-8532-00159c4c2ae3)
 
+Analiză
 
+## Grafic
 
 ## Raport AI
+
+Analiză
 
 
 ## Configurare
