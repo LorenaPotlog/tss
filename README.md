@@ -75,10 +75,9 @@ Dacă moneda este diferită de moneda contului, atunci prima data se va efectua 
 
 **Coverage**
 ---
-
 ![image](https://github.com/user-attachments/assets/6b22b4f9-fcfb-4328-80df-e410f516df51)
 
-
+**100% pe metode, 100% pe linii și 95% pe ramuri (branch)**
 
 ### Testare funcțională - Partiționare de echivalență (metoda validateIban)
 1) **Domeniul de intrări**
@@ -208,19 +207,27 @@ Mutation Coverage -> 52/52
 ![image](https://github.com/user-attachments/assets/590adbde-7564-4bae-8af6-27f9098b31db)
 ![image](https://github.com/user-attachments/assets/c4e20b10-defc-4f4e-9d86-aa2fac875240)
 
-
-Analiză
-
+---
 ![image](https://github.com/user-attachments/assets/183c5037-a0d7-43fb-b0c4-2ce871394c16)
+
+- Testul invalid nu este complet greșit. El testează corect logica ,însă în mesajul rezultat există o confuzie generată de moneda în care este afișată suma. În schimb valorile din rezultat, pentru sumă și total, sunt corecte.
+---
+*Analiză*
+
+- ChatGPT a generat 15 teste unitare, dintre care 14 au fost valide. Coverage-ul este de 100% pe metode, 94% pe linii și 75% pe ramuri (branch).
+- Per total testele acoperă majoritatea codului, dar anumite condiții au fost testate cu o singură valoare (true), în loc de ambele posibile (true și false).
+- Prin comparație, am reușit să găsesc redundanțe în testele scrise inițial și astfel am redus numărul lor de la 25 la 22 fără a modifica coverage-ul de 100%.
 
 
 
 ## Configurare
 - **IDE** - Intelij IDEA
-- **Java** - 22 &
+- **Java** - 22
 - **Maven**
 - **JUnit** - 5.7.1
 - **Pitest** - 1.19.0
-
+  
+## Surse
+- OpenAI, ChatGPT, https://chatgpt.com/, Data generării: 30 martie 2025
 
 
