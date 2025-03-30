@@ -21,13 +21,6 @@ class BankingServiceTest {
     assertTrue(bankingService.validateIban(validIban));
   }
 
-  @Test
-  @DisplayName("Validate IBAN with null value")
-  void validateIbanNull() {
-    String iban = null;
-    assertFalse(bankingService.validateIban(iban));
-  }
-
   @ParameterizedTest
   @ValueSource(
       strings = {"This iban is longer than 18",
@@ -42,12 +35,17 @@ class BankingServiceTest {
   }
 
   @Test
-  @DisplayName("Withdraw money from existing account")
-  void withdraw() {
-    Account account = new Account(validIban, 2000, "RON");
-    String result = bankingService.withdraw(account, 2000);
-    assertEquals(0, account.getBalance());
-    assertEquals("You have withdraw 2000. Your current balance is 0", result);
+  @DisplayName("ATM - invalid iban")
+  void atmInvalidIban() {
+    String result = bankingService.atm(null, "check", Optional.of(1000),Optional.of("RON"));
+    assertEquals("Invalid IBAN", result);
+  }
+
+  @Test
+  @DisplayName("ATM - withdraw from valid account")
+  void atmWithdraw() {
+    String result = bankingService.atm(validIban, "withdraw", Optional.of(200),Optional.of("RON"));
+    assertEquals("You have withdraw 200. Your current balance is 1800", result);
   }
 
   @Test
@@ -77,15 +75,15 @@ class BankingServiceTest {
     assertEquals("No amount to be withdraw", result);
   }
 
+  //B3
   @Test
-  @DisplayName("Deposit money in existing account")
-  void depositAmount() {
-    Account account = new Account(validIban, 500, "RON");
-    String result = bankingService.deposit(account, 350, "RON");
-    assertEquals(850, account.getBalance());
-    assertEquals("You have deposited 350 RON. Your current balance is 850", result);
+  @DisplayName("ATM - deposit in valid account")
+  void atmDeposit() {
+    String result = bankingService.atm(validIban, "deposit", Optional.of(400),Optional.of("RON"));
+    assertEquals("You have deposited 400 RON. Your current balance is 2400", result);
   }
 
+  //B2 && I2
   @Test
   @DisplayName("Deposit money in different currency and exchange from EUR to RON")
   void depositAmountExchangeToRon() {
@@ -95,6 +93,17 @@ class BankingServiceTest {
     assertEquals("You have deposited 1753 RON. Your current balance is 2253", result);
   }
 
+  //B1
+  @Test
+  @DisplayName("Deposit money but no valid exchange found")
+  void depositAmountNoExchangeFound() {
+    Account account = new Account(validIban, 500, "RON");
+    String result = bankingService.deposit(account, 350, "USD");
+    assertEquals(500, account.getBalance());
+    assertEquals("No possible exchange", result);
+  }
+
+  //I1
   @Test
   @DisplayName("Deposit money in different currency and exchange from RON to EUR")
   void depositAmountExchangeToEuro() {
@@ -104,13 +113,6 @@ class BankingServiceTest {
     assertEquals("You have deposited 70 EUR. Your current balance is 570", result);
   }
 
-
-  @Test
-  @DisplayName("ATM - invalid iban")
-  void atmInvalidIban() {
-    String result = bankingService.atm(null, "check", Optional.of(1000),Optional.of("RON"));
-    assertEquals("Invalid IBAN", result);
-  }
 
   @Test
   @DisplayName("ATM - valid iban but no account found")
@@ -133,33 +135,11 @@ class BankingServiceTest {
     assertEquals("The account for iban - BANK1234RO00000001, has a balance of 2000 RON", result);
   }
 
-
-  @Test
-  @DisplayName("ATM - withdraw from valid account")
-  void atmWithdraw() {
-    String result = bankingService.atm(validIban, "withdraw", Optional.of(200),Optional.of("RON"));
-    assertEquals("You have withdraw 200. Your current balance is 1800", result);
-  }
-
   @Test
   @DisplayName("ATM - withdraw but no amount specified")
   void atmWithdrawNoAmount() {
     String result = bankingService.atm(validIban, "withdraw", Optional.empty(),Optional.of("RON"));
     assertEquals("No amount specified", result);
-  }
-
-  @Test
-  @DisplayName("ATM - deposit in valid account")
-  void atmDeposit() {
-    String result = bankingService.atm(validIban, "deposit", Optional.of(400),Optional.of("RON"));
-    assertEquals("You have deposited 400 RON. Your current balance is 2400", result);
-  }
-
-  @Test
-  @DisplayName("ATM - deposit but no valid exchange")
-  void atmDepositNoExchangeFound() {
-    String result = bankingService.atm(validIban, "deposit", Optional.of(400),Optional.of("USD"));
-    assertEquals("No possible exchange", result);
   }
 
   @Test
