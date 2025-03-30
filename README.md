@@ -73,7 +73,12 @@ Dacă moneda este diferită de moneda contului, atunci prima data se va efectua 
 -> validateIban 
 -> deposit
 #### Testare funcțională - Valori de frontieră
--> withdraw
+
+Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testăm 4 valori de frontieră:
+  - o valoarea negativă
+  - 0
+  - suma disponibilă în cont
+  - o valoare mai mare decât suma disponibilă în cont
 
 
 #### Testare structurală - Acoperire la nivel de instrucțiune
