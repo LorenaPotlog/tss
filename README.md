@@ -1,7 +1,3 @@
-Ilustrați strategiile de generare de teste prezentate la curs (, acoperire la nivel de instrucțiune, decizie, condiție,
-circuite independente
-
-
 # Testare unitară în Java
 
 Proiectul implementează o aplicație de banking care permite diferite acțiuni asupra unor conturi validate prin IBAN.
@@ -133,16 +129,13 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
     
 ![image](https://github.com/user-attachments/assets/a7e4cbce-3de6-499c-9816-bd2d97522179)
 
-
 ### Testare structurală - Acoperire la nivel de instrucțiune
 ![image](https://github.com/user-attachments/assets/177592ef-9c07-4676-ae52-207e99025a43)
 
-În metoda **exhange** folosită de metoda **deposit** există o instrucțiune de tipul **if - else if**.
+Pentru metoda **exhange** folosită de metoda **deposit** există o instrucțiune de tipul **if - else if**.
 Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi pentru cea din else if.
 
 ![image](https://github.com/user-attachments/assets/97d5c95d-d0df-44bf-ad4e-6aac7a654c09)
-
-
 
 ### Testare structurală - Acoperire la nivel de ramură
 
@@ -156,7 +149,18 @@ Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi 
 ---
 ![image](https://github.com/user-attachments/assets/2d6f19da-6408-4b8b-b024-921b96326be5)
 
+
 ### Testare structurală - Acoperire la nivel de condiție
+![image](https://github.com/user-attachments/assets/72a9c948-f7c5-477e-acd0-e377afa47488)
+
+Pentru metoda **atm** testăm 2 condiții if, pentru validitatea IBAN-ului (C1) și pentru găsirea contului specific IBAN-ului (C2), dând atăt valori false și true.
+
+![image](https://github.com/user-attachments/assets/f10eca15-3d04-46cd-8d28-f35ca3f7229b)
+
+- Test 1 (atmInvalidIban): C1 - false
+- Test 2 (atmNoAccountFound): C1 - true, C2 - false
+- Test 3 (atmCheck): C2 - true
+
 ### Testare structurală - Circuite independente
 
 
