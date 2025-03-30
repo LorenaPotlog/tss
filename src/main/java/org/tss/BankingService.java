@@ -8,7 +8,7 @@ public class BankingService {
 
   public List<Account> accounts;
 
-  // Constructor to initialize the accounts list
+  // valid accounts
   public BankingService() {
     accounts = new ArrayList<>();
     accounts.add(new Account("BANK1234RO00000001", 2000, "RON"));
@@ -94,20 +94,27 @@ public class BankingService {
 
   public String withdraw(Account account, int amount) {
     int balance = account.getBalance();
-    if (amount > 0 && amount <= balance) {
+
+    if (amount < 0) {
+      return "Error on account withdrawal";
+    } else if (amount == 0) {
+      return "No amount to be withdraw";
+    }
+
+    if (amount <= balance) {
       account.setBalance(balance - amount);
       return "You have withdraw "
           + amount
           + ". "
           + "Your current balance is "
           + account.getBalance();
-    } else if (amount > balance) {
+    } else {
       return "Insufficient funds for withdrawal - "
           + amount
           + ". Your current balance is "
           + account.getBalance();
     }
-    return "Error on account withdrawal";
+
   }
 
   public String deposit(Account account, int amount, String currency) {
@@ -124,7 +131,7 @@ public class BankingService {
           + account.getBalance();
     } else {
       int exchangedAmount = exchange(amount, currency, account.getCurrency());
-      if(exchangedAmount == 0){
+      if (exchangedAmount == 0) {
         return "No possible exchange";
       }
       balance += exchangedAmount;
