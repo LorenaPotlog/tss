@@ -34,6 +34,8 @@ Metoda primește 4 parametrii și în funcție de anumite validări, redirecțio
 - *deposit*: depozitare bani
 
 ![image](https://github.com/user-attachments/assets/6c09e61d-4fd4-448e-b6b4-635a93684171)
+![image](https://github.com/user-attachments/assets/3e97138a-f456-4616-b96a-eadf4db90602)
+
 
 
 #### CHECK
@@ -50,6 +52,9 @@ Metoda primește 2 parametrii:
 - *account*: contul din care se va face retragerea
 - *amount*: suma care va fi retrasă
 
+![image](https://github.com/user-attachments/assets/02f39f34-ed5f-4fe4-9b77-5c170595afed)
+
+
 #### DEPOSIT
 ```
 public String deposit(Account account, int amount, String currency)
@@ -60,6 +65,8 @@ Metoda primește 3 parametrii:
 - *currency*: moneda sumei care va fi depusă
 
 Dacă moneda este diferită de moneda contului, atunci prima data se va efectua operația de **exchange** urmată de depunere.
+
+![image](https://github.com/user-attachments/assets/d09f5845-4416-4f88-b628-5e1e93872946)
 
 
 ## Teste funcționale și structurale
@@ -141,10 +148,6 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 ![image](https://github.com/user-attachments/assets/89b0a454-1cd9-4278-8532-00159c4c2ae3)
 
 Analiză
-
-## Grafic
-
-
 
 ## Raport AI
 
