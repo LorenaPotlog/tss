@@ -135,7 +135,27 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 
 
 ### Testare structurală - Acoperire la nivel de instrucțiune
-### Testare structurală - Acoperire la nivel de decizie
+![image](https://github.com/user-attachments/assets/177592ef-9c07-4676-ae52-207e99025a43)
+
+În metoda **exhange** folosită de metoda **deposit** există o instrucțiune de tipul **if - else if**.
+Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi pentru cea din else if.
+
+![image](https://github.com/user-attachments/assets/97d5c95d-d0df-44bf-ad4e-6aac7a654c09)
+
+
+
+### Testare structurală - Acoperire la nivel de ramură
+
+![image](https://github.com/user-attachments/assets/032df79c-0167-4575-8cfc-d3f335721974)
+
+![image](https://github.com/user-attachments/assets/bee82236-a962-452b-ad25-8c89f91a7a3e)
+
+![image](https://github.com/user-attachments/assets/4cd5ece6-5360-4e8a-8a44-95eb29add33e)
+
+#### Testăm fiecare ramură din metoda **deposit**.
+---
+![image](https://github.com/user-attachments/assets/2d6f19da-6408-4b8b-b024-921b96326be5)
+
 ### Testare structurală - Acoperire la nivel de condiție
 ### Testare structurală - Circuite independente
 
