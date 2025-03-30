@@ -30,7 +30,12 @@ class BankingServiceTest {
 
   @ParameterizedTest
   @ValueSource(
-      strings = {"This iban is longer than 18", "BANK1234TR00000001", "BANK1235RO00000001", "BADK1234TR00000001", "BANK1234TR00000003"})
+      strings = {"This iban is longer than 18",
+              "This is shorter",
+              "BANK1234TM00000001",
+              "BANK1235RO00000001",
+              "MADK1234TR00000001",
+              "BANK1234TR00000003"})
   @DisplayName("Validate IBAN with wrong values")
   void validateIbanWrong(String iban) {
     assertFalse(bankingService.validateIban(iban));
