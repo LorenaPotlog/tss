@@ -8,7 +8,7 @@ public class BankingService {
 
   public List<Account> accounts;
 
-  // Constructor to initialize the accounts list
+  // valid accounts
   public BankingService() {
     accounts = new ArrayList<>();
     accounts.add(new Account("BANK1234RO00000001", 2000, "RON"));
@@ -106,6 +106,8 @@ public class BankingService {
           + amount
           + ". Your current balance is "
           + account.getBalance();
+    } else if (amount == 0 ){
+      return "No amount to be withdraw";
     }
     return "Error on account withdrawal";
   }

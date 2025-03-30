@@ -9,6 +9,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// Teste funcționale și structurale
 class BankingServiceTest {
 
   BankingService bankingService = new BankingService();
@@ -39,9 +40,9 @@ class BankingServiceTest {
   @DisplayName("Withdraw money from existing account")
   void withdraw() {
     Account account = new Account(validIban, 2000, "RON");
-    String result = bankingService.withdraw(account, 300);
-    assertEquals(1700, account.getBalance());
-    assertEquals("You have withdraw 300. Your current balance is 1700", result);
+    String result = bankingService.withdraw(account, 2000);
+    assertEquals(0, account.getBalance());
+    assertEquals("You have withdraw 2000. Your current balance is 0", result);
   }
 
   @Test
@@ -60,6 +61,15 @@ class BankingServiceTest {
     String result = bankingService.withdraw(account, -100);
     assertEquals(500, account.getBalance());
     assertEquals("Error on account withdrawal", result);
+  }
+
+  @Test
+  @DisplayName("Withdraw no amount")
+  void withdrawNoAmount() {
+    Account account = new Account(validIban, 500, "RON");
+    String result = bankingService.withdraw(account, 0);
+    assertEquals(500, account.getBalance());
+    assertEquals("No amount to be withdraw", result);
   }
 
   @Test
