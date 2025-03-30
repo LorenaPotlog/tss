@@ -1,6 +1,5 @@
 Ilustrați strategiile de generare de teste prezentate la curs (, acoperire la nivel de instrucțiune, decizie, condiție,
-circuite independente, analiză raport creat de generatorul de mutanți, teste suplimentare pentru a
-omorî 2 dintre mutanții neechivalenți rămași în viață) pe exemple proprii.
+circuite independente
 
 
 # Testare unitară în Java
@@ -52,7 +51,7 @@ Metoda primește 2 parametrii:
 - *account*: contul din care se va face retragerea
 - *amount*: suma care va fi retrasă
 
-![image](https://github.com/user-attachments/assets/02f39f34-ed5f-4fe4-9b77-5c170595afed)
+![image](https://github.com/user-attachments/assets/c4757c82-d2f9-4fc4-8162-d3e0b342dd48)
 
 
 ### DEPOSIT
@@ -144,6 +143,8 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 ## Raport Pitest (Mutation testing)
 **Primul raport generat**
 
+Mutation Coverage -> 49/52
+
 ![image](https://github.com/user-attachments/assets/89b0a454-1cd9-4278-8532-00159c4c2ae3)
 
 **Analiză**
@@ -152,13 +153,21 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 
 ![image](https://github.com/user-attachments/assets/34eb3301-e694-465b-967d-3d8f78e8515f)
 
-Modificări
+**Modificări**
+
 Metoda inițială
 
 ![image](https://github.com/user-attachments/assets/c9258663-df98-4074-9e48-59b8fe609a12)
 
 Metoda îmbunătățită
 
+![image](https://github.com/user-attachments/assets/79937602-336f-41e9-bf59-ea80391287d5)
+
+**Al doilea raport generat**
+
+Mutation Coverage -> 52/52
+
+![image](https://github.com/user-attachments/assets/d5c905bf-4f5e-4846-965f-b02abd7aea77)
 
 ## Raport AI
 
