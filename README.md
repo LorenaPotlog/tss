@@ -161,9 +161,6 @@ Pentru metoda **atm** testăm 2 condiții if, pentru validitatea IBAN-ului (C1) 
 - Test 2 (atmNoAccountFound): C1 - true, C2 - false
 - Test 3 (atmCheck): C2 - true
 
-### Testare structurală - Circuite independente
-
-
 ## Raport Pitest (Mutation testing)
 **Primul raport generat**
 
