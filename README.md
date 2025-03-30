@@ -142,9 +142,23 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 
 
 ## Raport Pitest (Mutation testing)
+**Primul raport generat**
+
 ![image](https://github.com/user-attachments/assets/89b0a454-1cd9-4278-8532-00159c4c2ae3)
 
-Analiză
+**Analiză**
+
+![image](https://github.com/user-attachments/assets/fd5480c6-9751-4127-a846-1284aa8c35ca)
+
+![image](https://github.com/user-attachments/assets/34eb3301-e694-465b-967d-3d8f78e8515f)
+
+Modificări
+Metoda inițială
+
+![image](https://github.com/user-attachments/assets/c9258663-df98-4074-9e48-59b8fe609a12)
+
+Metoda îmbunătățită
+
 
 ## Raport AI
 
