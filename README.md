@@ -79,6 +79,8 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
   - 0
   - suma disponibilă în cont
   - o valoare mai mare decât suma disponibilă în cont
+    
+![image](https://github.com/user-attachments/assets/a7e4cbce-3de6-499c-9816-bd2d97522179)
 
 
 #### Testare structurală - Acoperire la nivel de instrucțiune
