@@ -62,19 +62,22 @@ Metoda primește 3 parametrii:
 
 Dacă moneda este diferită de moneda contului, atunci prima data se va efectua operația de **exchange** urmată de depunere.
 
-![image](https://github.com/user-attachments/assets/d09f5845-4416-4f88-b628-5e1e93872946)
+![image](https://github.com/user-attachments/assets/3fba3f15-06b8-442b-939a-46cd58e2e27a)
+
 
 
 ## Teste funcționale și structurale
-**✅Tests passed: 23 of 23 tests - 48 ms**
+***✅Tests passed: 22 of 22 tests - 147 ms**
 ---
 
-![image](https://github.com/user-attachments/assets/65da566c-78f1-4eed-ab76-cdf621ea1dec)
+![image](https://github.com/user-attachments/assets/438989f3-68a4-476d-b440-00a5185c75d9)
+
 
 **Coverage**
 ---
 
-![image](https://github.com/user-attachments/assets/0db85e71-b35e-46d0-a894-0eca5aeaa352)
+![image](https://github.com/user-attachments/assets/6b22b4f9-fcfb-4328-80df-e410f516df51)
+
 
 
 ### Testare funcțională - Partiționare de echivalență (metoda validateIban)
@@ -118,7 +121,8 @@ Astfel, împărțim domeniul de intrare în 2:
 - C_1 = {iban-ul este valid -> **True**}
 - C_2 = {iban-ul este invalid -> **False**}
 
-![image](https://github.com/user-attachments/assets/b80eec33-83cd-4277-87ef-bc9877f63cc1)
+![image](https://github.com/user-attachments/assets/16a6e130-aaa2-4a5e-ad92-5b524be39857)
+
 
 ### Testare funcțională - Valori de frontieră (metoda withdraw)
 Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testăm 4 valori de frontieră:
@@ -127,7 +131,8 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 - suma disponibilă în cont
 - o valoare mai mare decât suma disponibilă în cont
     
-![image](https://github.com/user-attachments/assets/a7e4cbce-3de6-499c-9816-bd2d97522179)
+![image](https://github.com/user-attachments/assets/fefe97ed-18ac-4844-ad22-15b1c908ade2)
+
 
 ### Testare structurală - Acoperire la nivel de instrucțiune
 ![image](https://github.com/user-attachments/assets/177592ef-9c07-4676-ae52-207e99025a43)
@@ -153,7 +158,7 @@ Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi 
 ### Testare structurală - Acoperire la nivel de condiție
 ![image](https://github.com/user-attachments/assets/72a9c948-f7c5-477e-acd0-e377afa47488)
 
-Pentru metoda **atm** testăm 2 condiții if, pentru validitatea IBAN-ului (C1) și pentru găsirea contului specific IBAN-ului (C2), dând atăt valori false și true.
+Pentru metoda **atm** testăm condițiile if, pentru validitatea IBAN-ului (C1) și pentru găsirea contului specific IBAN-ului (C2), dând atăt valori false și true.
 
 ![image](https://github.com/user-attachments/assets/f10eca15-3d04-46cd-8d28-f35ca3f7229b)
 
@@ -174,6 +179,8 @@ Mutation Coverage -> 49/52
 
 ![image](https://github.com/user-attachments/assets/34eb3301-e694-465b-967d-3d8f78e8515f)
 
+Raportul arată că pentru metoda **withdraw** există 2 mutații care au supraviețuit, mai precis ele nu au fost detectate de testele unitare.
+
 **Modificări**
 
 Metoda inițială
@@ -184,6 +191,11 @@ Metoda îmbunătățită
 
 ![image](https://github.com/user-attachments/assets/79937602-336f-41e9-bf59-ea80391287d5)
 
+Teste suplimentare
+
+![image](https://github.com/user-attachments/assets/bccb6002-d872-4082-8c21-81a72508a6be)
+
+
 **Al doilea raport generat**
 
 Mutation Coverage -> 52/52
@@ -192,7 +204,15 @@ Mutation Coverage -> 52/52
 
 ## Raport AI
 
+![image](https://github.com/user-attachments/assets/6c4ca4b8-cf9d-459f-ba4f-07fd7039d1cc)
+![image](https://github.com/user-attachments/assets/590adbde-7564-4bae-8af6-27f9098b31db)
+![image](https://github.com/user-attachments/assets/c4e20b10-defc-4f4e-9d86-aa2fac875240)
+
+
 Analiză
+
+![image](https://github.com/user-attachments/assets/183c5037-a0d7-43fb-b0c4-2ce871394c16)
+
 
 
 ## Configurare
