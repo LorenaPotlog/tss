@@ -33,6 +33,9 @@ Metoda primește 4 parametrii și în funcție de anumite validări, redirecțio
 - *withdraw*: retragere bani 
 - *deposit*: depozitare bani
 
+![image](https://github.com/user-attachments/assets/6c09e61d-4fd4-448e-b6b4-635a93684171)
+
+
 #### CHECK
 ```
 public String checkAccount(Account account)
@@ -69,16 +72,61 @@ Dacă moneda este diferită de moneda contului, atunci prima data se va efectua 
 ![image](https://github.com/user-attachments/assets/0db85e71-b35e-46d0-a894-0eca5aeaa352)
 
 
-#### Testare funcțională - Partiționare de echivalență
+#### Testare funcțională - Partiționare de echivalență (metoda validateIban)
+1) Domeniul de intrări
+
+IBAN - un sir de caractere. Pentru a fi valid, IBAN-ul trebuie să respecte următoarele condiții:
+- sa aibă exact 18 caractere
+- 0-4 = "BANK"
+- 4-8 = un cod ce reprezintă moneda ("1234")
+- 8-10 = cod ce reprezintă țara ("RO")
+- 10-16 = 6 caractere
+- 16-18 = "01"
+
+Distingem următoarele clase de echivalență
+
+- N_1 = 18 caractere
+
+- N_2 = mai puțin de 18
+
+- N_3 = mai mult de 18
+
+
+- P_1 = "BANK"
+
+- P_2 = orice altă valoare
+
+
+- M_1 = cod monedă valid
+
+- M_2 = cod monedă invalid
+
+
+- O_1 = cod țară valid
+
+- O_2 = cod țară invalid
+
+
+- Q_1 = "01"
+
+- Q_2 = orice altă valoare
+
+
+3) Domeniul de ieșiri
+- True
+- False
+- 
 -> validateIban 
 -> deposit
-#### Testare funcțională - Valori de frontieră
 
+![image](https://github.com/user-attachments/assets/79988648-e733-4566-b8dd-526ee5fa2349)
+
+#### Testare funcțională - Valori de frontieră (metoda withdraw)
 Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testăm 4 valori de frontieră:
-  - o valoarea negativă
-  - 0
-  - suma disponibilă în cont
-  - o valoare mai mare decât suma disponibilă în cont
+- o valoarea negativă
+- 0
+- suma disponibilă în cont
+- o valoare mai mare decât suma disponibilă în cont
     
 ![image](https://github.com/user-attachments/assets/a7e4cbce-3de6-499c-9816-bd2d97522179)
 
@@ -95,6 +143,8 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 Analiză
 
 ## Grafic
+
+
 
 ## Raport AI
 
