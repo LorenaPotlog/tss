@@ -133,7 +133,7 @@ Suma care poate fi retrasă este între 0 și suma disponibilă în cont. Testă
 
 
 ### Testare structurală - Acoperire la nivel de instrucțiune
-![image](https://github.com/user-attachments/assets/177592ef-9c07-4676-ae52-207e99025a43)
+![image](https://github.com/user-attachments/assets/6b5ec312-5bb5-4a77-a900-e5c1017e546d)
 
 Pentru metoda **exhange** folosită de metoda **deposit** există o instrucțiune de tipul **if - else if**.
 Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi pentru cea din else if.
