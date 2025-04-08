@@ -47,7 +47,7 @@ Metoda primește 2 parametrii:
 - *account*: contul din care se va face retragerea
 - *amount*: suma care va fi retrasă
 
-![image](https://github.com/user-attachments/assets/c4757c82-d2f9-4fc4-8162-d3e0b342dd48)
+![image](https://github.com/user-attachments/assets/a50646c8-ef39-43b9-90e8-82beb126df4d)
 
 
 ### DEPOSIT
