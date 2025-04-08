@@ -142,11 +142,11 @@ Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi 
 
 ### Testare structurală - Acoperire la nivel de ramură
 
-![image](https://github.com/user-attachments/assets/032df79c-0167-4575-8cfc-d3f335721974)
+![image](https://github.com/user-attachments/assets/ebc6adcd-82c9-4501-80cd-9a7f8b09e8b7)
 
-![image](https://github.com/user-attachments/assets/bee82236-a962-452b-ad25-8c89f91a7a3e)
+![image](https://github.com/user-attachments/assets/4477c8b0-8bd5-4713-9c6e-09ec8df0ef53)
 
-![image](https://github.com/user-attachments/assets/4cd5ece6-5360-4e8a-8a44-95eb29add33e)
+![image](https://github.com/user-attachments/assets/d204a1e5-ceed-4927-8d20-b9ff1ac9a1c3)
 
 #### Testăm fiecare ramură din metoda **deposit**.
 ---
