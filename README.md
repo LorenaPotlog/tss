@@ -156,7 +156,8 @@ Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi 
 
 
 ### Testare structurală - Acoperire la nivel de condiție
-![image](https://github.com/user-attachments/assets/72a9c948-f7c5-477e-acd0-e377afa47488)
+
+![image](https://github.com/user-attachments/assets/4ceba143-3914-4f37-b0c2-2032eb9556e8)
 
 Pentru metoda **atm** testăm condițiile if, pentru validitatea IBAN-ului (C1) și pentru găsirea contului specific IBAN-ului (C2), dând atăt valori false și true.
 
