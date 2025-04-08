@@ -62,8 +62,7 @@ Metoda primește 3 parametrii:
 
 Dacă moneda este diferită de moneda contului, atunci prima data se va efectua operația de **exchange** urmată de depunere.
 
-![image](https://github.com/user-attachments/assets/3fba3f15-06b8-442b-939a-46cd58e2e27a)
-
+![image](https://github.com/user-attachments/assets/e1cce0b7-d3fe-4895-93c4-34f6d3919526)
 
 
 ## Teste funcționale și structurale
