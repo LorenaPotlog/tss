@@ -28,8 +28,10 @@ Metoda primește 4 parametrii și în funcție de anumite validări, redirecțio
 - *withdraw*: retragere bani 
 - *deposit*: depozitare bani
 
-![image](https://github.com/user-attachments/assets/6c09e61d-4fd4-448e-b6b4-635a93684171)
-![image](https://github.com/user-attachments/assets/3e97138a-f456-4616-b96a-eadf4db90602)
+![image](https://github.com/user-attachments/assets/649c77b1-70ad-4561-a1da-d98cea98d2ec)
+
+![image](https://github.com/user-attachments/assets/232c8c40-8f5c-4f23-9067-3acb2e8e21fa)
+
 
 ### CHECK
 ---
