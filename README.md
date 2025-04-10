@@ -154,6 +154,12 @@ Testăm ambele noduri, dând valori adevarăte pentru condiția din if și apoi 
 ---
 ![image](https://github.com/user-attachments/assets/2d6f19da-6408-4b8b-b024-921b96326be5)
 
+| Metodă                       | Account                | Amount | Currency | Rezultat                                                                 | Decizii acoperite             |
+|----------------------------------|------------------------|--------|----------|--------------------------------------------------------------------------|-------------------------------|
+| `depositAmountNoExchangeFound`  | validAccount in RON    | 350    | USD      | "No possible exchange"                                                   | B1 – if false, if true        |
+| `depositAmountExchangeToRon`    | validAccount in RON    | 350    | EUR      | "You have deposited 1753 RON. Your current balance is 2253"              | B2 – if true                  |
+| `depositAmount`                 | validAccount in RON    | 350    | RON      | "You have deposited 400 RON. Your current balance is 2400"               | B3 – if false, if false       |
+
 
 ### Testare structurală - Acoperire la nivel de condiție
 
