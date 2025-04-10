@@ -177,6 +177,12 @@ Pentru metoda **atm** testăm condițiile if, pentru validitatea IBAN-ului (C1) 
 - Test 1 (atmInvalidIban): C1 - false
 - Test 2 (atmNoAccountFound): C1 - true, C2 - false
 - Test 3 (atmCheck): C2 - true
+  
+| Metodă        | IBAN                          | Action | Amount | Currency | Rezultat                                                                 | Decizii acoperite           |
+|---------------------|-------------------------------|--------|--------|----------|--------------------------------------------------------------------------|-----------------------------|
+| `atmInvalidIban`    | invalid iban                  | check  | 1000   | RON      | "Invalid IBAN"                                                            | C1 – false                  |
+| `atmNoAccountFound` | valid iban for invalid account| check  | 1000   | RON      | "Account not found"                                                      | C1 – true, C2 – false       |
+| `atmCheck`          | valid iban                    | check  | 1000   | RON      | "The account for iban - BANK1234RO00000001, has a balance of 2000 RON"   | C2 – false                  |
 
 ## Raport Pitest (Mutation testing)
 **Primul raport generat**
