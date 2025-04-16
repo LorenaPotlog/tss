@@ -1,3 +1,4 @@
+Proiectul realizat de Potlog Lorena-Elena.
 # Testare unitară în Java
 
 Proiectul implementează o aplicație de banking care permite diferite acțiuni asupra unor conturi validate prin IBAN.
